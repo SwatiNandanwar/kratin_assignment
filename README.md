@@ -7,3 +7,4 @@ How to run :
 2. Run on vscode
 3. Run the index.html file.
 
+Screenshots:https://drive.google.com/drive/folders/1EzKEjjcfTRD2ZLU0AJNztfh3yvST6zWe?usp=sharing
