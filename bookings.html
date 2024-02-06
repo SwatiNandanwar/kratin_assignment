@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #price {
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book a Ride</h1>
+    <form id="bookingForm">
+        <label for="pickup">Pickup Location:</label>
+        <input type="text" id="pickup" name="pickup" required>
+
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required>
+
+        <label for="cabType">Select a Cab:</label>
+        <select id="cabType" name="cabType">
+            <option value="sedan">Sedan</option>
+            <option value="van">Van</option>
+            <option value="suv">SUV</option>
+        </select>
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" readonly>
+
+        <label for="payment">Payment Option:</label>
+        <select id="payment" name="payment">
+            <option value="credit">Credit Card</option>
+            <option value="debit">Debit Card</option>
+            <option value="paypal">PayPal</option>
+        </select>
+
+        <button type="submit">Book Now</button>
+    </form>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Retrieve values from form
+            var pickup = document.getElementById('pickup').value;
+            var destination = document.getElementById('destination').value;
+            var cabType = document.getElementById('cabType').value;
+
+            // Calculate price based on pickup, destination, and cab type (you can implement your logic here)
+            var price = calculatePrice(pickup, destination, cabType);
+
+            // Update the price field
+            document.getElementById('price').value = price;
+
+            // Optionally, you can redirect to a payment page here
+            // Example: window.location.href = 'payment.html';
+        });
+
+        // Listen for input events on pickup and destination fields to update the price
+        document.getElementById('pickup').addEventListener('input', updatePrice);
+        document.getElementById('destination').addEventListener('input', updatePrice);
+
+        function updatePrice() {
+            var pickup = document.getElementById('pickup').value;
+            var destination = document.getElementById('destination').value;
+            var cabType = document.getElementById('cabType').value;
+
+            var price = calculatePrice(pickup, destination, cabType);
+            document.getElementById('price').value = price;
+        }
+
+        function calculatePrice(pickup, destination, cabType) {
+            // Implement your logic to calculate the price based on pickup, destination, and cab type
+            // This is just a placeholder function
+            return '$50'; // Placeholder price
+        }
+    </script>
+    <div class="home-footer">
+        <footer class="footerContainer home-footer1">
+          <div class="home-container29">
+            <span class="logo">Freedom Wheels Express</span>
+            <nav class="home-nav1">
+              <a href="index.html" class="home-nav11">Home</span>
+              <a href="services.html" class="home-nav22 bodySmall">Services</span>
+              <a href="bookings.html" class="home-nav32">Bookings</span>
+              <a href="faq.html" class="home-nav42">FAQ</span>
+              <a href="contact.html" class="home-nav52">Contact</span>
+            </nav>
+          </div>
+          
+          
+           
+        </footer>
+      </div>
+
+
+</body>
+</html>

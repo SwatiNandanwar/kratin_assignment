@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            height: 100px; /* Adjust height as needed */
+        }
+
+        .contact-form button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <div class="contact-form">
+        <form action="submit_contact_form.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="home-footer">
+        <footer class="footerContainer home-footer1">
+          <div class="home-container29">
+            <span class="logo">Freedom Wheels Express</span>
+            <nav class="home-nav1">
+              <a href="index.html" class="home-nav11">Home</span>
+              <a href="services.html" class="home-nav22 bodySmall">Services</span>
+              <a href="bookings.html" class="home-nav32">Bookings</span>
+              <a href="faq.html" class="home-nav42">FAQ</span>
+              <a href="contact.html" class="home-nav52">Contact</span>
+            </nav>
+          
+        </footer>
+      </div>
+</body>
+</html>
+
+</body>
+</html>
